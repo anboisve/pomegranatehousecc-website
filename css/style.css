@@ -1,0 +1,375 @@
+/* Pomegranate House Children's Center — Brand Stylesheet */
+
+:root {
+  --pomegranate: #8B1E2D;
+  --pomegranate-light: #C76A6A;
+  --blush: #E9B7B3;
+  --sage: #8AA17A;
+  --sage-light: #B8C3A7;
+  --cream: #F7F3EB;
+  --text: #3A3A3A;
+  --text-light: #6B6B6B;
+  --white: #FFFFFF;
+  --shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  --radius: 8px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--cream);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  color: var(--pomegranate);
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; margin-bottom: 1rem; }
+h3 { font-size: 1.4rem; margin-bottom: 0.5rem; }
+
+p { margin-bottom: 1rem; }
+
+a {
+  color: var(--pomegranate);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover {
+  color: var(--pomegranate-light);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* --- Navigation --- */
+.nav {
+  background: var(--white);
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.nav-logo img {
+  height: 48px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text);
+  padding: 4px 0;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--pomegranate);
+  border-bottom-color: var(--pomegranate);
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text);
+}
+
+/* --- Hero --- */
+.hero {
+  text-align: center;
+  padding: 80px 24px 60px;
+}
+
+.hero-logo {
+  max-width: 320px;
+  margin: 0 auto 24px;
+}
+
+.hero-tagline {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-style: italic;
+  color: var(--pomegranate-light);
+  margin-bottom: 12px;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  margin-bottom: 32px;
+}
+
+/* --- Buttons --- */
+.btn {
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: var(--radius);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.2s;
+  text-decoration: none;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.btn-primary {
+  background: var(--pomegranate);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background: #7A1A27;
+  color: var(--white);
+}
+
+.btn-secondary {
+  background: var(--sage);
+  color: var(--white);
+}
+
+.btn-secondary:hover {
+  background: #7A9069;
+  color: var(--white);
+}
+
+/* --- Sections --- */
+.section {
+  padding: 60px 24px;
+}
+
+.section-alt {
+  background: var(--white);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* --- Pillars (Home page) --- */
+.pillars {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  margin-top: 24px;
+}
+
+.pillar-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s;
+}
+
+.pillar-card:hover {
+  transform: translateY(-4px);
+}
+
+.pillar-icon {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pillar-icon.bg-sage {
+  background-color: var(--sage-light);
+}
+
+.pillar-icon.bg-pomegranate {
+  background-color: var(--blush);
+}
+
+.pillar-card h3 {
+  color: var(--sage);
+}
+
+/* --- Footer --- */
+.footer {
+  background: var(--pomegranate);
+  color: var(--blush);
+  padding: 40px 24px;
+  text-align: center;
+}
+
+.footer a {
+  color: var(--white);
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  list-style: none;
+  margin-bottom: 16px;
+}
+
+.footer-copy {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+/* --- Programs page --- */
+.program-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+.program-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 32px;
+  box-shadow: var(--shadow);
+  border-top: 4px solid var(--sage);
+}
+
+.program-card h3 {
+  color: var(--pomegranate);
+}
+
+.program-ages {
+  font-size: 0.9rem;
+  color: var(--sage);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* --- Contact / Enroll --- */
+.form-embed {
+  max-width: 640px;
+  margin: 0 auto;
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 32px;
+  box-shadow: var(--shadow);
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.info-icon {
+  font-size: 1.5rem;
+  color: var(--sage);
+}
+
+/* --- About page --- */
+.about-content {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.about-content h3 {
+  margin-top: 2rem;
+}
+
+.quote-block {
+  border-left: 4px solid var(--blush);
+  padding: 16px 24px;
+  margin: 24px 0;
+  font-style: italic;
+  color: var(--text-light);
+  background: var(--white);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.5rem; }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    padding: 24px;
+    box-shadow: var(--shadow);
+    gap: 16px;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .hero {
+    padding: 48px 24px 40px;
+  }
+
+  .hero-logo {
+    max-width: 240px;
+  }
+
+  .hero-tagline {
+    font-size: 1.2rem;
+  }
+}
